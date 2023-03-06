@@ -3,3 +3,96 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.head{
+    @apply flex items-center justify-between py-3 bg-[#2B3844] px-32;
+}
+
+.head_title{
+    @apply text-cyan-50 text-2xl;
+}
+
+.head_mode{
+    @apply text-cyan-50;
+    position: relative;
+}
+
+.head_mode::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: url(/build/img/moon.png) no-repeat;
+    background-size: 100% 100%;
+    left: -25px;
+    top: 5px;
+}
+
+/* Section_1 */
+
+.section1{
+    @apply px-32 my-12 flex justify-between items-start;
+}
+
+.section1_input{
+    @apply pl-16 py-3 w-96 bg-[#2B3844] rounded;
+}
+
+.form{
+    position: relative;
+}
+
+.form::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url(/build/img/lupa.png) no-repeat;
+    background-size: 100% 100%;
+    left: 22px;
+    top: 15px;
+}
+
+.section1_btn{
+    @apply bg-[#2B3844] text-white w-60 inline-block py-3 rounded px-6 mb-1;
+}
+
+.btn_list{
+    @apply text-white bg-[#2B3844] rounded hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.filter{
+    position: relative;
+}
+
+.filter:hover > .btn_list{
+    display: block;
+}
+
+.btn_items{
+    @apply pl-6 py-2 hover:shadow-lg shadow-white;
+}
+
+/* Section_2 */
+
+.section2{
+    @apply px-32 mb-10;
+}
+
+.section2_cards{
+    @apply flex justify-between flex-wrap gap-y-16;
+}
+
+.card{
+    @apply h-[370px] bg-[#2B3844] w-fit rounded;
+}
+
+.card_title{
+    @apply text-white text-xl p-6;
+}
+
+.card_list{
+    @apply text-white pl-6 gap-y-1.5 flex flex-col;
+}
